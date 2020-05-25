@@ -1,10 +1,5 @@
-<main class="container">
-  <div id="map" class="map"></div>
-  <div id="info" class="info"></div>
-</main>
+console.log('script was loaded')
 
-<% provide :footer_tags do %>
-<%= javascript_tag defer: 'defer' do -%>
 const mapStyles = [
       { elementType: 'geometry', stylers: [{color: '#242f3e'}]},
       {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'},{visibility: 'off'}]},
@@ -140,6 +135,14 @@ const createMarker = ({ map, position, icon }) => {
   return new google.maps.Marker({ map, position, icon });
 };
 
+// const getCurrentPosition = ({ onSuccess, onError = () => { } }) => {
+//   if ('geolocation' in navigator === false) {
+//     return onError(new Error('Geolocation is not supported by your browser.'));
+//   }
+//
+//   return navigator.geolocation.getCurrentPosition(onSuccess, onError);
+// };
+
 // New function to track user's location.
 const trackLocation = ({ onSuccess, onError = () => { } }) => {
   if ('geolocation' in navigator === false) {
@@ -195,6 +198,57 @@ function init() {
       alert(`Error: ${getPositionErrorMessage(err.code) || err.message}`)
   });
 }
-<% end -%>
-<%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAH69U6syhrmeoCk5wLNsa5_V6-c2Ah3Ms&callback=init', :async => true, :defer => true %>
-<% end %>
+
+
+fetch('https://maps.googleapis.com/maps/api/js?key=AIzaSyAH69U6syhrmeoCk5wLNsa5_V6-c2Ah3Ms')
+      .then(()=> init())
+
+
+//
+//
+//
+// fetch('/api/v1/people.json', {
+//   method: 'post',
+//   body: JSON.stringify({first_name: "Ricky", last_name: "Bobby"}),
+//   headers: {
+//     'Content-Type': 'application/json',
+//     // 'X-CSRF-Token': Rails.csrfToken()
+//   },
+//   credentials: 'same-origin'
+// }).then(function(response) {
+//   return response.json();
+// }).then(function(data) {
+//   console.log(data);
+// });
+
+// Rails.ajax({
+//   url: "/api/v1/people.json",
+//   type: "POST",
+//   data: "first_name=Ricky&last_name=Bobby",
+//   success: function(data) {
+//     console.log(data);
+//   }
+// });
+// drawing static polyline
+// var lineCoordinates = [
+//   new google.maps.LatLng(30.055487, 31.279766),
+//   new google.maps.LatLng(30.223356, 31.324345),
+//   new google.maps.LatLng(30.345656, 31.567677),
+//   new google.maps.LatLng(30.565678, 31.676887)
+// ];
+// createPolyline(map, lineCoordinates, lineSymbol);
+//
+// var linePath;
+// function createPolyline(map,lineCoordinates,lineSymbol){
+//   linePath = new google.maps.Polyline({
+//     path: lineCoordinates,
+//     geodesic: true,
+//     strokeColor: '#FF0000',
+//     strokeOpacity: 1.0,
+//     strokeWeight: 2
+//    });
+//  linePath.setMap(map);
+// }
+
+
+//map styles

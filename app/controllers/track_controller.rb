@@ -11,6 +11,27 @@ class TrackController < ApplicationController
   #
   #   render json: { code: @code, children: @children }
   # end
+  # def create
+  #   @newRoute = Track.new(user_id: fav_params[:user_id], code: @code)
+  #
+  #   if @newRoute.save
+  #     render json: @newRoute
+  #   else
+  #     render json: @newRoute.errors, status: :unprocessable_entity
+  #   end
+  #
+  # end
+
+  # def show
+  #   @favorites = Favorite.where(user_id: params[:user_id])
+  #   p codes_array = []
+  #   @favorites.each do |favorite|
+  #     code = Code.find(favorite[:code_id])
+  #     p codes_array << { "code_id": code[:code_id], "desc": code[:desc]}
+  #   end
+  #   render json: codes_array
+  # end
+
 end
 
 private
