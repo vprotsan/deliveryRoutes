@@ -6,9 +6,9 @@
 <% provide :footer_tags do %>
 <%= javascript_tag defer: 'defer' do -%>
 const mapStyles = [
-      { elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+      { elementType: 'geometry', stylers: [{color: '#ced4d8'}]},
       {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'},{visibility: 'off'}]},
-      {elementType: 'labels.text.fill', stylers: [{color: '#746855'},{visibility: 'off'}]},
+      {elementType: 'labels.text.fill', stylers: [{color: '#bac1c7'},{visibility: 'off'}]},
       {
         featureType: 'administrative.locality',
         elementType: 'all',
@@ -72,12 +72,12 @@ const mapStyles = [
       {
         featureType: 'road',
         elementType: 'geometry',
-        stylers: [{color: '#38414e'}]
+        stylers: [{color: '#ffffff'}]
       },
       {
         featureType: 'road',
         elementType: 'geometry.stroke',
-        stylers: [{color: '#212a37'}]
+        stylers: [{color: '#bfc5ca'}]
       },
       {
         featureType: 'road',
@@ -87,17 +87,17 @@ const mapStyles = [
       {
         featureType: 'road.highway',
         elementType: 'geometry',
-        stylers: [{color: '#746855'}]
+        stylers: [{color: '#ffffff'}]
       },
       {
         featureType: 'road.highway',
         elementType: 'geometry.stroke',
-        stylers: [{color: '#1f2835'}]
+        stylers: [{color: '#bfc5ca'}]
       },
       {
         featureType: 'road.highway',
         elementType: 'labels.text.fill',
-        stylers: [{color: '#f3d19c'},{visibility: 'off'}]
+        stylers: [{color: '#bac1c7'},{visibility: 'off'}]
       },
       {
         featureType: 'transit',
@@ -112,17 +112,17 @@ const mapStyles = [
       {
         featureType: 'water',
         elementType: 'geometry',
-        stylers: [{color: '#17263c'}]
+        stylers: [{color: '#a6cbe3'}]
       },
       {
         featureType: 'water',
         elementType: 'labels.text.fill',
-        stylers: [{color: '#515c6d'},{visibility: 'off'}]
+        stylers: [{color: '#5b7e94'},{visibility: 'off'}]
       },
       {
         featureType: 'water',
         elementType: 'labels.text.stroke',
-        stylers: [{color: '#17263c'},{visibility: 'off'}]
+        stylers: [{color: '#5b7e94'},{visibility: 'off'}]
       }
   ]
 
@@ -171,8 +171,8 @@ const getPositionErrorMessage = code => {
 function init() {
 
   let custPosition = { lat: 30.317598, lng: -81.4557006 }
-  let driverPosition = { lat: 30.3166771, lng: -81.4719205 }
-  let storePosition = { lat: 30.3166771, lng: -81.4719205 }
+  let driverPosition = { lat: 31.926385, lng: -81.334488 }
+  let storePosition = { lat: 31.926260, lng: -81.334744 }
 
   driverPath.push(driverPosition)
   console.log(driverPath)

@@ -1,5 +1,5 @@
 const mapStyles = [
-      { elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+      { elementType: 'geometry', stylers: [{color: '#ced4d8'}]},
       {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'},{visibility: 'off'}]},
       {elementType: 'labels.text.fill', stylers: [{color: '#746855'},{visibility: 'off'}]},
       {

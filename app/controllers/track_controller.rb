@@ -20,6 +20,7 @@ class TrackController < ApplicationController
       p tracks_array << { "track_id": track}
     end
     # render json: tracks_array
+    # index.js #this will load index.js.erb
   end
 
 end
